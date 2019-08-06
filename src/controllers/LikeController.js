@@ -2,10 +2,10 @@ const Dev = require('../models/Dev')
 
 module.exports = {
   async store(request, response) {
-    const { user } = request.headers
+    const { user_id } = request.headers
     const { devId } = request.params
 
-    const loggedDev = await Dev.findById(user)
+    const loggedDev = await Dev.findById(user_id)
     const targetDev = await Dev.findById(devId)
 
     if (!targetDev) {
