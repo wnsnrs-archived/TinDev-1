@@ -4,6 +4,14 @@ import logo from '../assets/logo.svg'
 
 export default function Login() {
   return (
-    <img src={logo} alt='tindev' />
+    <div className="login-container">
+      <form action="">
+        <img src={logo} alt='tindev' />
+        <input
+          placeholder="Digite seu user do Github"
+        />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
   )
 }
