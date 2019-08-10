@@ -1,14 +1,21 @@
 import React, { useState } from 'react'
 import './Login.css'
+import api from '../services/api'
 import logo from '../assets/logo.svg'
 
 export default function Login(props) {
   const [username, setUsername] = useState('')
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
 
-    props.history.push('/main')
+    const response = await api.post('/devs', {
+      username: username,
+    })
+
+    const { _id } = response.data
+
+    props.history.push(`/dev/${_id}`)
   }
 
   return (
