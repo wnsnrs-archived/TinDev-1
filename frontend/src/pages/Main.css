@@ -65,3 +65,23 @@
   transform: translateY(-5px);
   transition: all 0.2s;
 }
+
+.main-container .empty {
+  font-size: 32px;
+  color: #999;
+  font-weight: bold;
+  margin-top: 300px;
+}
+
+.btn {
+  margin-top: 50px;
+  width: 30%;
+  height: 50px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #FFF;
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
